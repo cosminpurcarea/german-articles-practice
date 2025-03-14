@@ -1,0 +1,16 @@
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/dashboard": "pages/dashboard.js",
+  "/": "pages/index.js",
+  "/practice": "pages/practice.js",
+  "/signin": "pages/signin.js",
+  "/sign-up/[[...index]]": "pages/sign-up/[[...index]].js",
+  "/sign-in": "pages/sign-in.js",
+  "/repository": "pages/repository.js",
+  "/sign-up/verify-email-address": "pages/sign-up/verify-email-address.js",
+  "/signup": "pages/signup.js",
+  "/api/middleware": "pages/api/middleware.js",
+  "/api/webhooks/clerk": "pages/api/webhooks/clerk.js",
+  "/_document": "pages/_document.js"
+}
