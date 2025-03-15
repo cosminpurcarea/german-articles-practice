@@ -17,7 +17,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="lg:grid lg:grid-cols-12 lg:gap-8">
               <div className="lg:col-span-6">
-                <div className="text-blue-500 text-5xl font-bold mb-2">VOLKARI</div>
+                <div className="text-blue-500 text-5xl font-bold mb-2">RAEGERA</div>
                 <div className="text-gray-600 italic mb-6">"Finis Coronat Opus"</div>
                 
                 <h1 className="text-4xl font-extrabold tracking-tight text-gray-900">
@@ -93,7 +93,7 @@ export default function Home() {
         <div className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-4">
-              <h2 className="text-3xl font-bold text-gray-900">Why VOLKARI Works</h2>
+              <h2 className="text-3xl font-bold text-gray-900">Why RAEGERA Works</h2>
               <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
                 Our specialized approach has helped thousands of German learners master articles with confidence.
               </p>
@@ -220,7 +220,7 @@ export default function Home() {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900">What Our Users Say</h2>
               <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
-                Join thousands of satisfied users who have mastered German articles with VOLKARI.
+                Join thousands of satisfied users who have mastered German articles with RAEGERA.
               </p>
             </div>
             
@@ -238,7 +238,7 @@ export default function Home() {
                     </div>
                   </div>
                   <p className="text-gray-600 italic mb-4">
-                    "VOLKARI has completely transformed my German learning experience. I used to struggle with articles, but now I can confidently use 'der', 'die', and 'das' correctly in most situations."
+                    "RAEGERA has completely transformed my German learning experience. I used to struggle with articles, but now I can confidently use 'der', 'die', and 'das' correctly in most situations."
                   </p>
                   <div className="flex text-yellow-400">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
@@ -261,7 +261,7 @@ export default function Home() {
                     </div>
                   </div>
                   <p className="text-gray-600 italic mb-4">
-                    "As a German teacher, I recommend VOLKARI to all my students. The spaced repetition system and focused practice on articles is exactly what most learners need."
+                    "As a German teacher, I recommend RAEGERA to all my students. The spaced repetition system and focused practice on articles is exactly what most learners need."
                   </p>
                   <div className="flex text-yellow-400">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
@@ -284,7 +284,7 @@ export default function Home() {
                     </div>
                   </div>
                   <p className="text-gray-600 italic mb-4">
-                    "I've tried many language apps, but VOLKARI is the only one that specifically addresses the challenge of German articles. My accuracy has improved from 60% to over 90% in just two months!"
+                    "I've tried many language apps, but RAEGERA is the only one that specifically addresses the challenge of German articles. My accuracy has improved from 60% to over 90% in just two months!"
                   </p>
                   <div className="flex text-yellow-400">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
@@ -296,7 +296,7 @@ export default function Home() {
             </div>
             
             <div className="mt-8 text-center">
-              <p className="text-gray-600 mb-6">Join over 10,000 users who are mastering German articles with VOLKARI.</p>
+              <p className="text-gray-600 mb-6">Join over 10,000 users who are mastering German articles with RAEGERA.</p>
               <Link href="/dashboard" legacyBehavior>
                 <a className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700">
                   Get Started Today
@@ -312,24 +312,24 @@ export default function Home() {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900">Frequently Asked Questions</h2>
               <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
-                Get answers to the most common questions about VOLKARI.
+                Get answers to the most common questions about RAEGERA.
               </p>
             </div>
             
             <div className="max-w-3xl mx-auto divide-y divide-gray-200">
               {/* FAQ Item 1 */}
               <div className="py-6">
-                <h3 className="text-lg font-medium text-gray-900">How does VOLKARI help with German articles?</h3>
+                <h3 className="text-lg font-medium text-gray-900">How does RAEGERA help with German articles?</h3>
                 <p className="mt-2 text-gray-600">
-                  VOLKARI uses a specialized spaced repetition system focused solely on German articles. By practicing regularly with our system, you'll develop an intuition for the correct article usage through pattern recognition and consistent practice.
+                  RAEGERA uses a specialized spaced repetition system focused solely on German articles. By practicing regularly with our system, you'll develop an intuition for the correct article usage through pattern recognition and consistent practice.
                 </p>
               </div>
               
               {/* FAQ Item 2 */}
               <div className="py-6">
-                <h3 className="text-lg font-medium text-gray-900">Is VOLKARI suitable for beginners?</h3>
+                <h3 className="text-lg font-medium text-gray-900">Is RAEGERA suitable for beginners?</h3>
                 <p className="mt-2 text-gray-600">
-                  Yes! VOLKARI is designed for learners at all levels. Beginners will build a strong foundation by learning articles correctly from the start, while intermediate and advanced learners can fill gaps in their knowledge and improve accuracy.
+                  Yes! RAEGERA is designed for learners at all levels. Beginners will build a strong foundation by learning articles correctly from the start, while intermediate and advanced learners can fill gaps in their knowledge and improve accuracy.
                 </p>
               </div>
               
@@ -343,9 +343,9 @@ export default function Home() {
               
               {/* FAQ Item 4 */}
               <div className="py-6">
-                <h3 className="text-lg font-medium text-gray-900">Can I use VOLKARI alongside other German learning resources?</h3>
+                <h3 className="text-lg font-medium text-gray-900">Can I use RAEGERA alongside other German learning resources?</h3>
                 <p className="mt-2 text-gray-600">
-                  Absolutely! VOLKARI is designed to complement your existing German learning resources. While other apps and courses cover grammar and vocabulary broadly, VOLKARI specifically addresses the challenging aspect of article usage.
+                  Absolutely! RAEGERA is designed to complement your existing German learning resources. While other apps and courses cover grammar and vocabulary broadly, RAEGERA specifically addresses the challenging aspect of article usage.
                 </p>
               </div>
             </div>
@@ -359,9 +359,9 @@ export default function Home() {
               <div className="md:col-span-1">
                 <div className="flex items-center">
                   <div className="bg-blue-500 rounded-full h-8 w-8 flex items-center justify-center text-white font-bold">
-                    V
+                    R
                   </div>
-                  <span className="ml-2 text-xl font-bold text-blue-500">VOLKARI</span>
+                  <span className="ml-2 text-xl font-bold text-blue-500">RAEGERA</span>
                 </div>
                 <p className="mt-4 text-gray-500 text-sm">
                   Mastering German articles, one practice session at a time.
@@ -398,7 +398,7 @@ export default function Home() {
             
             <div className="mt-8 pt-8 border-t border-gray-200">
               <p className="text-base text-gray-400 text-center">
-                &copy; {new Date().getFullYear()} VOLKARI. All rights reserved.
+                &copy; {new Date().getFullYear()} RAEGERA. All rights reserved.
               </p>
             </div>
           </div>

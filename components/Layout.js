@@ -21,9 +21,9 @@ export default function Layout({ children }) {
               <Link href="/" legacyBehavior>
                 <a className="flex items-center">
                   <div className="bg-blue-500 rounded-full h-8 w-8 flex items-center justify-center text-white font-bold">
-                    V
+                    R
                   </div>
-                  <span className="ml-2 text-xl font-bold text-blue-500">VOLKARI</span>
+                  <span className="ml-2 text-xl font-bold text-blue-500">RAEGERA</span>
                 </a>
               </Link>
 
