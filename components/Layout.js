@@ -90,12 +90,12 @@ export default function Layout({ children }) {
                   />
                 ) : (
                   <div className="flex items-center space-x-4">
-                    <Link href="/signin" legacyBehavior>
+                    <Link href="/sign-in" legacyBehavior>
                       <a className="text-sm font-medium text-gray-500 hover:text-gray-700">
                         Sign in
                       </a>
                     </Link>
-                    <Link href="/signup" legacyBehavior>
+                    <Link href="/sign-up" legacyBehavior>
                       <a className="text-sm font-medium px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
                         Sign up
                       </a>

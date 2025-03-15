@@ -3,7 +3,14 @@ import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ClerkProvider>
+    <ClerkProvider
+      appearance={{
+        elements: {
+          formButtonPrimary: "bg-blue-600 hover:bg-blue-700 text-white",
+        }
+      }}
+      navigate={(to) => window.location.href = to}
+    >
       <Component {...pageProps} />
     </ClerkProvider>
   );
