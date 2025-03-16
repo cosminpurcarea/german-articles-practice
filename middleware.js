@@ -7,7 +7,9 @@ export default authMiddleware({
     "/",                         // Home page
     "/sign-in(.*)",              // All sign in routes
     "/sign-up(.*)",              // All sign up routes
-    "/api/webhooks(.*)"          // Webhook endpoints
+    "/api/webhooks(.*)",          // Webhook endpoints
+    "/privacy",                  // Privacy policy
+    "/terms"                     // Terms and conditions
   ],
   ignoredRoutes: [
     "/((?!api|trpc))(_next.*|.+.[w]+$)", // Ignore static files

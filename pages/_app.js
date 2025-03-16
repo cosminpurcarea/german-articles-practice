@@ -1,5 +1,6 @@
 import { ClerkProvider } from '@clerk/nextjs';
 import '../styles/globals.css';
+import CookieConsent from '../components/CookieConsent';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -12,6 +13,7 @@ function MyApp({ Component, pageProps }) {
       navigate={(to) => window.location.href = to}
     >
       <Component {...pageProps} />
+      <CookieConsent />
     </ClerkProvider>
   );
 }

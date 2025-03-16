@@ -382,14 +382,15 @@ export default function Home() {
                 <ul className="mt-4 space-y-4">
                   <li><a href="#" className="text-base text-gray-500 hover:text-gray-900">Blog</a></li>
                   <li><a href="#" className="text-base text-gray-500 hover:text-gray-900">Support</a></li>
-                  <li><a href="#" className="text-base text-gray-500 hover:text-gray-900">Privacy Policy</a></li>
+                  <li><a href="/privacy" className="text-base text-gray-500 hover:text-gray-900">Privacy Policy</a></li>
+                  <li><a href="/terms" className="text-base text-gray-500 hover:text-gray-900">Terms & Conditions</a></li>
                 </ul>
               </div>
               
               <div className="md:col-span-1">
                 <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Connect</h3>
                 <ul className="mt-4 space-y-4">
-                  <li><a href="#" className="text-base text-gray-500 hover:text-gray-900">Contact Us</a></li>
+                  <li><a href="/contact" className="text-base text-gray-500 hover:text-gray-900">Contact Us</a></li>
                   <li><a href="#" className="text-base text-gray-500 hover:text-gray-900">Twitter</a></li>
                   <li><a href="#" className="text-base text-gray-500 hover:text-gray-900">LinkedIn</a></li>
                 </ul>
