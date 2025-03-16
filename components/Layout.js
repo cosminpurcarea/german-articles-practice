@@ -1,125 +1,77 @@
+import Head from 'next/head';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { UserButton, useUser } from "@clerk/nextjs";
+import { useUser, UserButton, SignInButton, SignUpButton } from "@clerk/nextjs";
 
-export default function Layout({ children }) {
-  const router = useRouter();
+export default function Layout({ children, title = 'RAEGERA - Master German Articles' }) {
   const { user, isLoaded } = useUser();
   
-  // Function to determine if a link is active
-  const isActive = (path) => router.pathname === path;
-
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen flex flex-col">
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content="Master German articles with our specialized practice system" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
       {/* Navigation Header */}
       <header className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            {/* Left side: Logo and Nav */}
-            <div className="flex items-center">
-              {/* Logo */}
-              <Link href="/" legacyBehavior>
-                <a className="flex items-center">
-                  <div className="bg-blue-500 rounded-full h-8 w-8 flex items-center justify-center text-white font-bold">
-                    R
-                  </div>
-                  <span className="ml-2 text-xl font-bold text-blue-500">RAEGERA</span>
-                </a>
+          <div className="flex justify-between h-16 items-center">
+            {/* Logo */}
+            <div className="flex-shrink-0 flex items-center">
+              <Link href="/" className="flex items-center">
+                <div className="h-10 w-10 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold text-xl">
+                  R
+                </div>
+                <span className="ml-2 text-blue-500 text-xl font-bold">RAEGERA</span>
               </Link>
-
-              {/* Navigation - Show whenever user is authenticated */}
+            </div>
+            
+            {/* Navigation */}
+            <nav className="hidden md:flex space-x-8">
+              <Link href="/" className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">
+                Home
+              </Link>
               {user && (
-                <nav className="ml-10 flex space-x-8">
-                  <Link href="/" legacyBehavior>
-                    <a className={`px-3 py-2 text-sm font-medium ${
-                      isActive('/') 
-                        ? 'text-blue-600'
-                        : 'text-gray-500 hover:text-gray-700'
-                    }`}>
-                      Home
-                    </a>
-                  </Link>
-                  
-                  <Link href="/dashboard" legacyBehavior>
-                    <a className={`px-3 py-2 text-sm font-medium ${
-                      isActive('/dashboard')
-                        ? 'text-blue-600'
-                        : 'text-gray-500 hover:text-gray-700'
-                    }`}>
-                      Dashboard
-                    </a>
-                  </Link>
-                  
-                  <Link href="/practice" legacyBehavior>
-                    <a className={`px-3 py-2 text-sm font-medium ${
-                      isActive('/practice')
-                        ? 'text-blue-600'
-                        : 'text-gray-500 hover:text-gray-700'
-                    }`}>
-                      Practice
-                    </a>
-                  </Link>
-                  
-                  <Link href="/repository" legacyBehavior>
-                    <a className={`px-3 py-2 text-sm font-medium ${
-                      isActive('/repository')
-                        ? 'text-blue-600'
-                        : 'text-gray-500 hover:text-gray-700'
-                    }`}>
-                      Repository
-                    </a>
-                  </Link>
-                  
-                  <Link href="/contact" legacyBehavior>
-                    <a className={`px-3 py-2 text-sm font-medium ${
-                      isActive('/contact')
-                        ? 'text-blue-600'
-                        : 'text-gray-500 hover:text-gray-700'
-                    }`}>
-                      Contact
-                    </a>
-                  </Link>
-                </nav>
+                <Link href="/dashboard" className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">
+                  Dashboard
+                </Link>
+              )}
+              <Link href="/privacy" className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">
+                Privacy
+              </Link>
+              <Link href="/terms" className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">
+                Terms
+              </Link>
+            </nav>
+            
+            {/* Authentication Buttons */}
+            <div className="flex items-center space-x-4">
+              {isLoaded && (
+                user ? (
+                  <UserButton afterSignOutUrl="/" />
+                ) : (
+                  <div className="flex gap-3">
+                    <SignInButton mode="modal">
+                      <button className="text-blue-600 hover:text-blue-800 font-medium">
+                        Sign In
+                      </button>
+                    </SignInButton>
+                    <SignUpButton mode="modal">
+                      <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium">
+                        Sign Up
+                      </button>
+                    </SignUpButton>
+                  </div>
+                )
               )}
             </div>
-
-            {/* Right side: Auth buttons */}
-            {isLoaded && (
-              <div className="flex items-center">
-                {user ? (
-                  <UserButton 
-                    afterSignOutUrl="/"
-                    appearance={{
-                      elements: {
-                        userButtonAvatarBox: {
-                          width: '2rem',
-                          height: '2rem'
-                        }
-                      }
-                    }}
-                  />
-                ) : (
-                  <div className="flex items-center space-x-4">
-                    <Link href="/sign-in" legacyBehavior>
-                      <a className="text-sm font-medium text-gray-500 hover:text-gray-700">
-                        Sign in
-                      </a>
-                    </Link>
-                    <Link href="/sign-up" legacyBehavior>
-                      <a className="text-sm font-medium px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
-                        Sign up
-                      </a>
-                    </Link>
-                  </div>
-                )}
-              </div>
-            )}
           </div>
         </div>
       </header>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+      <main className="flex-grow">
         {children}
       </main>
     </div>
