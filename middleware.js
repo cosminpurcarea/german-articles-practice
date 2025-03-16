@@ -1,8 +1,8 @@
-import { authMiddleware } from "@clerk/nextjs";
+import { authMiddleware as clerkMiddleware } from '@clerk/nextjs';
 
 // This example protects all routes including api/trpc routes
 // Please edit this to allow other routes to be public as needed.
-export default authMiddleware({
+export default clerkMiddleware({
   publicRoutes: [
     "/",                         // Home page
     "/sign-in(.*)",              // All sign in routes
