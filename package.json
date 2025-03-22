@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^6.12.5",
+    "@clerk/themes": "^1.7.20",
     "@supabase/supabase-js": "^2.39.0",
     "micro": "^10.0.1",
     "next": "^14.0.4",
