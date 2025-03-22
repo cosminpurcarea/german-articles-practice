@@ -1,10 +1,16 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { useUser, UserButton, SignInButton, SignUpButton } from "@clerk/nextjs";
+import { useEffect } from 'react';
 
 export default function Layout({ children, title = 'RAEGERA - Master German Articles' }) {
   const { user, isLoaded } = useUser();
   
+  // Add debug logging to understand the auth state
+  useEffect(() => {
+    console.log("Clerk auth state:", { isLoaded, isSignedIn: !!user });
+  }, [isLoaded, user]);
+
   return (
     <div className="min-h-screen flex flex-col">
       <Head>
@@ -45,25 +51,25 @@ export default function Layout({ children, title = 'RAEGERA - Master German Arti
               </Link>
             </nav>
             
-            {/* Authentication Buttons */}
+            {/* Authentication Buttons - with explicit state display */}
             <div className="flex items-center space-x-4">
-              {isLoaded && (
-                user ? (
-                  <UserButton afterSignOutUrl="/" />
-                ) : (
-                  <div className="flex gap-3">
-                    <SignInButton mode="modal">
-                      <button className="text-blue-600 hover:text-blue-800 font-medium">
-                        Sign In
-                      </button>
-                    </SignInButton>
-                    <SignUpButton mode="modal">
-                      <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium">
-                        Sign Up
-                      </button>
-                    </SignUpButton>
-                  </div>
-                )
+              {!isLoaded ? (
+                <span className="text-sm text-gray-500">Loading auth...</span>
+              ) : user ? (
+                <UserButton afterSignOutUrl="/" />
+              ) : (
+                <div className="flex gap-3">
+                  <SignInButton mode="modal">
+                    <button className="text-blue-600 hover:text-blue-800 font-medium">
+                      Sign In
+                    </button>
+                  </SignInButton>
+                  <SignUpButton mode="modal">
+                    <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium">
+                      Sign Up
+                    </button>
+                  </SignUpButton>
+                </div>
               )}
             </div>
           </div>
